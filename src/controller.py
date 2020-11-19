@@ -17,9 +17,9 @@ class logger:
 
 class network:
     count = 0
-    def __init__(self,IP:tuple):
+    def __init__(self,addr:tuple):
         self.sockfd=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        self.sockfd.connect(IP)
+        self.sockfd.connect(addr)
 
     def recv(self):
         data = ""
